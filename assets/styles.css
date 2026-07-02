@@ -205,6 +205,40 @@ ul.check li::before {
 }
 .hero-visual svg { width: 100%; height: auto; display: block; }
 
+/* ---------- Auszeichnungs-/Netzwerk-Streifen ---------- */
+.credbar { border-top: 1px solid var(--rahmen); border-bottom: 1px solid var(--rahmen); background: var(--weiss); }
+.credbar__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 28px 48px; padding: 26px 28px; }
+.credbar__inner .lbl {
+  font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--kraeftiggrau); margin-right: 4px;
+}
+.credbar img { display: block; width: auto; }
+.credbar .badge-inqa { height: 84px; }
+.credbar .badge-seal { height: 84px; }
+.credbar .badge-acn { height: 48px; }
+.credbar a { display: inline-flex; align-items: center; transition: opacity 0.15s; }
+.credbar a:hover { opacity: 0.78; }
+
+/* ---------- Alchimedus-Partnerschaft ---------- */
+.partner__grid { display: grid; grid-template-columns: 300px 1fr; gap: 44px; align-items: center; }
+.partner__logo {
+  background: var(--weiss); border: 1px solid var(--rahmen); border-radius: 16px;
+  padding: 32px 28px; display: flex; align-items: center; justify-content: center;
+}
+.partner__logo img { width: 100%; height: auto; display: block; }
+.partner__text h2 { margin-top: 0; }
+
+/* ---------- Über mich (Foto + Text) ---------- */
+.about__grid { display: grid; grid-template-columns: 340px 1fr; gap: 44px; align-items: center; }
+.about__photo { margin: 0; }
+.about__photo img {
+  width: 100%; height: auto; display: block; border-radius: 16px;
+  border: 1px solid var(--rahmen); object-fit: cover; object-position: 50% 22%; aspect-ratio: 4 / 5;
+  box-shadow: 0 12px 36px rgba(20, 32, 28, 0.12);
+}
+.about__photo figcaption { margin-top: 12px; font-size: 0.86rem; color: var(--mittelgrau); font-weight: 600; }
+.about__text .eyebrow { margin-top: 0; }
+
 /* ---------- Trust bar ---------- */
 .trustbar { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; margin: 30px 0 4px; }
 .trustbar .item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--mittelgrau); font-weight: 600; }
@@ -426,6 +460,10 @@ footer .social a {
   .hero__grid { grid-template-columns: 1fr; }
   .cards.cols-4 { grid-template-columns: repeat(2, 1fr); }
   footer .fgrid { grid-template-columns: 1fr 1fr; }
+  .about__grid { grid-template-columns: 1fr; gap: 28px; }
+  .about__photo { max-width: 320px; }
+  .partner__grid { grid-template-columns: 1fr; gap: 28px; }
+  .partner__logo { max-width: 340px; }
 }
 @media (max-width: 820px) {
   .triple, .funding, .testimonials, .reflist, .numgrid { grid-template-columns: 1fr; }
