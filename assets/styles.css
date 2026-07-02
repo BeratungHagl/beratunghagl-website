@@ -151,7 +151,7 @@ a { color: var(--gruen-dark); }
 /* ---------- Layout / sections ---------- */
 section { padding: 76px 0; border-top: 1px solid var(--rahmen); }
 section:first-of-type { border-top: none; }
-section.tinted { background: var(--gruen-tint); border-top: 1px solid var(--rahmen); border-bottom: 1px solid var(--rahmen); }
+section.tinted { background: var(--hellgrau); border-top: 1px solid var(--rahmen); border-bottom: 1px solid var(--rahmen); }
 section.dark { background: #14201c; color: #eef2ec; border-top: none; }
 section.dark .muted { color: #b7c2b1; }
 section.dark h2, section.dark h3 { color: #fff; }
@@ -198,12 +198,13 @@ ul.check li::before {
 .hero .meta .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gruen); }
 
 .hero-visual {
-  background: var(--gruen-tint);
-  border: 1px solid #cfe0bb;
+  background: var(--hellgrau);
+  border: 1px solid var(--rahmen);
   border-radius: 20px;
   padding: 28px;
 }
 .hero-visual svg { width: 100%; height: auto; display: block; }
+.hero .btn-row .btn-lg { padding: 15px 20px; }
 
 /* ---------- Auszeichnungs-/Netzwerk-Streifen ---------- */
 .credbar { border-top: 1px solid var(--rahmen); border-bottom: 1px solid var(--rahmen); background: var(--weiss); }
@@ -271,11 +272,15 @@ ul.check li::before {
   text-transform: uppercase;
 }
 .card .icon {
-  width: 42px; height: 42px; border-radius: 10px;
-  background: var(--gruen-tint); color: var(--gruen-dark);
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--gruen);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem; margin-bottom: 14px;
+  margin-bottom: 16px;
+  transition: background 0.18s;
 }
+.card:hover .icon { background: var(--gruen-dark); }
+.card .icon svg { width: 26px; height: 26px; display: block; }
+.card .icon svg * { stroke: #fff; }
 .card h4 { margin: 8px 0 8px; font-size: 1.14rem; font-weight: 700; letter-spacing: -0.01em; }
 .card p { margin: 0 0 14px; font-size: 0.95rem; color: var(--mittelgrau); }
 .card .go { font-size: 0.9rem; font-weight: 600; color: var(--gruen-dark); }
@@ -385,7 +390,7 @@ ul.check li::before {
 
 /* ---------- Callout ---------- */
 .callout {
-  background: var(--gruen-tint);
+  background: var(--hellgrau);
   border-left: 4px solid var(--gruen);
   border-radius: 0 10px 10px 0;
   padding: 18px 22px;
