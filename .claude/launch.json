@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "beratunghagl-website",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5173", "--directory", "C:/Users/andre/IONOS HiDrive/Beratung/Claude Code Projekte/beratunghagl-website"],
+      "port": 5173
+    }
+  ]
+}
