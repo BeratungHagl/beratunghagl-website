@@ -282,7 +282,7 @@ ul.check li::before {
 .card:hover .icon { background: var(--gruen-dark); }
 .card .icon svg { width: 26px; height: 26px; display: block; }
 .card .icon svg * { stroke: #fff; }
-.card h4 { margin: 8px 0 8px; font-size: 1.14rem; font-weight: 700; letter-spacing: -0.01em; }
+.card h3 { margin: 8px 0 8px; font-size: 1.14rem; font-weight: 700; letter-spacing: -0.01em; }
 .card p { margin: 0 0 14px; font-size: 0.95rem; color: var(--mittelgrau); }
 .card .go { font-size: 0.9rem; font-weight: 600; color: var(--gruen-dark); }
 
@@ -312,7 +312,7 @@ ul.check li::before {
   align-items: center;
   justify-content: center;
 }
-.steps li h4 { margin: 0 0 6px; font-size: 1.1rem; }
+.steps li h3 { margin: 0 0 6px; font-size: 1.1rem; }
 .steps li p { margin: 0; color: var(--mittelgrau); font-size: 0.97rem; }
 
 /* ---------- Numbered grid (alternative to steps, for 4/7-phase lists) ---------- */
@@ -326,7 +326,7 @@ ul.check li::before {
   background: var(--gruen); color: #fff; font-weight: 800; font-size: 1rem;
   display: flex; align-items: center; justify-content: center;
 }
-.numgrid .num-card h4 { margin: 0 0 4px; }
+.numgrid .num-card h3 { margin: 0 0 4px; }
 .numgrid .num-card p { margin: 0; font-size: 0.93rem; color: var(--mittelgrau); }
 
 /* ---------- Testimonials ---------- */
@@ -406,7 +406,7 @@ ul.check li::before {
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0; }
 .triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 22px 0; }
 .scard { background: var(--weiss); border: 1px solid var(--rahmen); border-radius: 12px; padding: 20px 20px 18px; border-top: 3px solid var(--gruen); }
-.scard h4 { margin: 0 0 12px; font-size: 1.05rem; }
+.scard h3 { margin: 0 0 12px; font-size: 1.05rem; }
 .scard ul { margin: 0; padding-left: 18px; }
 .scard ul li { margin: 0 0 8px; font-size: 0.95rem; color: #2a2a2a; }
 .scard ul li::marker { color: var(--gruen); }
