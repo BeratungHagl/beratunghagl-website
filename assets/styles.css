@@ -216,6 +216,7 @@ ul.check li::before {
 .credbar img { display: block; width: auto; }
 .credbar .badge-inqa { height: 84px; }
 .credbar .badge-seal { height: 84px; }
+.credbar .badge-manifesto { height: 84px; border-radius: 50%; }
 .credbar .badge-acn { height: 48px; }
 .credbar a { display: inline-flex; align-items: center; transition: opacity 0.15s; }
 .credbar a:hover { opacity: 0.78; }
