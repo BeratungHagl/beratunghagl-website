@@ -4,21 +4,21 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.andreas-hagl.de" }],
-      "destination": "https://andreas-hagl.de/:path*",
+      "destination": "https://andreas-hagl.de/$1",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "beratung-hagl.de" }],
-      "destination": "https://andreas-hagl.de/:path*",
+      "destination": "https://andreas-hagl.de/$1",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.beratung-hagl.de" }],
-      "destination": "https://andreas-hagl.de/:path*",
+      "destination": "https://andreas-hagl.de/$1",
       "permanent": true
     }
   ]
