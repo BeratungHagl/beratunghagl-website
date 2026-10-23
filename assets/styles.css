@@ -571,6 +571,26 @@ section.gruen .btn-ghost:hover { border-color: #fff; color: #fff; background: rg
 /* ---------- Cards: 3-column variant (5 Leistungen wrap 3+2) ---------- */
 .cards.cols-3 { grid-template-columns: repeat(3, 1fr); }
 
+/* ---------- Cookie-Consent-Banner ---------- */
+#cookie-banner {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 1000;
+  background: var(--weiss); border: 1px solid var(--rahmen); border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(20, 32, 28, 0.18);
+}
+#cookie-banner .cb-inner {
+  max-width: var(--maxw); margin: 0 auto; padding: 18px 22px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px;
+}
+#cookie-banner .cb-text { margin: 0; flex: 1 1 320px; font-size: 0.9rem; color: var(--mittelgrau); line-height: 1.55; }
+#cookie-banner .cb-text a { color: var(--gruen-dark); }
+#cookie-banner .cb-actions { display: flex; gap: 10px; flex: 0 0 auto; }
+#cookie-banner .cb-actions .btn { padding: 11px 20px; }
+.cookie-settings { cursor: pointer; }
+@media (max-width: 560px) {
+  #cookie-banner .cb-actions { width: 100%; }
+  #cookie-banner .cb-actions .btn { flex: 1 1 auto; justify-content: center; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero__grid { grid-template-columns: 1fr; }
