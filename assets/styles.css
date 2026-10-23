@@ -204,7 +204,7 @@ ul.check li::before {
   padding: 28px;
 }
 .hero-visual svg { width: 100%; height: auto; display: block; }
-.hero .btn-row .btn-lg { padding: 15px 20px; }
+.hero .btn-row .btn-lg { padding: 14px 15px; }
 
 /* ---------- Auszeichnungs-/Netzwerk-Streifen ---------- */
 .credbar { border-top: 1px solid var(--rahmen); border-bottom: 1px solid var(--rahmen); background: var(--weiss); }
