@@ -532,6 +532,32 @@ footer .social a {
   background: var(--gruen-tint); border-radius: 999px; padding: 4px 12px; white-space: nowrap;
 }
 
+/* ---------- Whitepaper request form ---------- */
+.wp-titles { margin: 18px 0 6px; padding-left: 20px; }
+.wp-titles li { margin: 0 0 8px; font-weight: 600; color: #2a2a2a; }
+.wp-titles li::marker { color: var(--gruen); }
+.wp-form {
+  background: var(--weiss); border: 1px solid var(--rahmen); border-radius: 14px;
+  padding: 22px 22px 20px; margin: 20px 0; display: grid; gap: 14px; max-width: 640px;
+}
+.wp-form .row { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+.wp-form label { font-size: 0.86rem; font-weight: 600; color: #2a2a2a; display: flex; flex-direction: column; gap: 6px; }
+.wp-form input[type="email"], .wp-form select {
+  font-family: var(--ff); font-size: 0.98rem; padding: 11px 12px;
+  border: 1px solid var(--rahmen); border-radius: 8px; background: #fff; color: #1a1a1a; width: 100%;
+}
+.wp-form input[type="email"]:focus, .wp-form select:focus {
+  outline: 2px solid var(--gruen); outline-offset: 1px; border-color: var(--gruen);
+}
+.wp-form .check-inline { flex-direction: row; align-items: flex-start; gap: 9px; font-weight: 500; color: var(--mittelgrau); font-size: 0.9rem; }
+.wp-form .check-inline input { margin-top: 3px; flex: 0 0 auto; }
+.wp-form button { justify-self: start; }
+.wp-form .wp-status { margin: 0; font-size: 0.9rem; min-height: 1.1em; }
+.wp-form .wp-status.wp-error { color: #b3261e; font-weight: 600; }
+.wp-form .wp-note { font-size: 0.82rem; color: var(--mittelgrau); margin: 2px 0 0; }
+.wp-success { color: var(--gruen-dark); font-weight: 600; margin: 0; }
+@media (max-width: 620px) { .wp-form .row { grid-template-columns: 1fr; } }
+
 /* ---------- Green CTA section (B.3: grüne Fläche, weißer Text) ---------- */
 section.gruen { background: var(--gruen); color: #fff; border-top: none; }
 section.gruen h2, section.gruen h3 { color: #fff; }

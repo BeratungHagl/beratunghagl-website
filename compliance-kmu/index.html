@@ -196,13 +196,41 @@
     </div>
   </section>
 
+  <section id="whitepaper">
+    <div class="wrap">
+      <p class="eyebrow">Whitepaper</p>
+      <h2>Whitepaper zu Risiko &amp; Compliance</h2>
+      <p class="muted">E-Mail eintragen, Whitepaper auswählen — Sie erhalten es direkt per Mail.</p>
+      <form class="wp-form" novalidate>
+        <div class="row">
+          <label>Ihre E-Mail
+            <input type="email" name="email" required autocomplete="email" placeholder="name@firma.de" />
+          </label>
+          <label>Whitepaper
+            <select name="wp" required>
+              <option value="" disabled selected>Bitte wählen…</option>
+              <option value="risiko">Risiken erkennen. Handlungsfähig bleiben.</option>
+              <option value="security">Security &amp; Compliance</option>
+            </select>
+          </label>
+        </div>
+        <label class="check-inline">
+          <input type="checkbox" name="newsletter" />
+          Zusätzlich den Newsletter mit Impulsen für KMU erhalten (jederzeit abbestellbar).
+        </label>
+        <button class="btn btn-primary" type="submit">Whitepaper anfordern</button>
+        <p class="wp-status" role="status" aria-live="polite"></p>
+        <p class="wp-note">Mit dem Absenden erhalten Sie das gewählte Whitepaper per E-Mail. Hinweise in der
+          <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+      </form>
+    </div>
+  </section>
+
   <section class="gruen final-cta">
     <div class="wrap">
       <h2>Kennen Sie Ihre fünf größten Risiken?</h2>
       <div class="btn-row">
         <a class="btn btn-primary btn-lg" href="https://calendly.com/kontakt-hagl/30min" target="_blank" rel="noopener">Kostenloses Erstgespräch</a>
-        <a class="btn btn-ghost btn-lg" href="/downloads/Whitepaper_Risiko-Compliance_Hagl.pdf" target="_blank" rel="noopener">Whitepaper „Risiken erkennen“</a>
-        <a class="btn btn-ghost btn-lg" href="/downloads/Whitepaper_Security-Compliance_Hagl.pdf" target="_blank" rel="noopener">Whitepaper „Security &amp; Compliance“</a>
       </div>
     </div>
   </section>
@@ -261,5 +289,6 @@
 </footer>
 
 <script src="/assets/nav.js"></script>
+<script src="/assets/whitepaper.js"></script>
 </body>
 </html>

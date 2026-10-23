@@ -418,18 +418,47 @@
   </section>
 
   <!-- ===================== WHITEPAPER ===================== -->
-  <section>
+  <section id="whitepaper">
     <div class="wrap">
       <p class="eyebrow">Whitepaper</p>
       <h2>Wissen zum Mitnehmen</h2>
-      <div class="wp-list">
-        <a href="/downloads/Whitepaper_Strategieupdate_Hagl.pdf" target="_blank" rel="noopener">Strategie ist Chefsache — das jährliche Strategieupdate<span class="dl">PDF ↓</span></a>
-        <a href="/downloads/Whitepaper_Marke_Hagl.pdf" target="_blank" rel="noopener">Eine echte Marke werden<span class="dl">PDF ↓</span></a>
-        <a href="/downloads/Whitepaper_Prozesse-Organisation_Hagl.pdf" target="_blank" rel="noopener">Wachstum braucht Struktur — Prozesse und Organisation<span class="dl">PDF ↓</span></a>
-        <a href="/downloads/Whitepaper_Risiko-Compliance_Hagl.pdf" target="_blank" rel="noopener">Risiken erkennen. Handlungsfähig bleiben.<span class="dl">PDF ↓</span></a>
-        <a href="/downloads/Whitepaper_Security-Compliance_Hagl.pdf" target="_blank" rel="noopener">Security &amp; Compliance<span class="dl">PDF ↓</span></a>
-        <a href="/downloads/Whitepaper_KI-Digitalisierung_Hagl.pdf" target="_blank" rel="noopener">KI mit Fahrplan<span class="dl">PDF ↓</span></a>
-      </div>
+      <p class="lead muted">Sechs Whitepaper zu Strategie, Marke, Prozessen, Risiko, Security und KI.
+        E-Mail eintragen, Whitepaper auswählen — Sie erhalten es direkt per Mail.</p>
+      <ul class="wp-titles">
+        <li>Strategie ist Chefsache — das jährliche Strategieupdate</li>
+        <li>Eine echte Marke werden</li>
+        <li>Wachstum braucht Struktur — Prozesse und Organisation</li>
+        <li>Risiken erkennen. Handlungsfähig bleiben.</li>
+        <li>Security &amp; Compliance</li>
+        <li>KI mit Fahrplan</li>
+      </ul>
+      <form class="wp-form" novalidate>
+        <div class="row">
+          <label>Ihre E-Mail
+            <input type="email" name="email" required autocomplete="email" placeholder="name@firma.de" />
+          </label>
+          <label>Whitepaper
+            <select name="wp" required>
+              <option value="" disabled selected>Bitte wählen…</option>
+              <option value="strategie">Strategie ist Chefsache</option>
+              <option value="marke">Eine echte Marke werden</option>
+              <option value="prozesse">Wachstum braucht Struktur</option>
+              <option value="risiko">Risiken erkennen. Handlungsfähig bleiben.</option>
+              <option value="security">Security &amp; Compliance</option>
+              <option value="ki">KI mit Fahrplan</option>
+            </select>
+          </label>
+        </div>
+        <label class="check-inline">
+          <input type="checkbox" name="newsletter" />
+          Zusätzlich den Newsletter mit Impulsen für KMU erhalten (jederzeit abbestellbar).
+        </label>
+        <button class="btn btn-primary" type="submit">Whitepaper anfordern</button>
+        <p class="wp-status" role="status" aria-live="polite"></p>
+        <p class="wp-note">Mit dem Absenden erhalten Sie das gewählte Whitepaper per E-Mail an die
+          angegebene Adresse. Hinweise zur Verarbeitung in der
+          <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+      </form>
     </div>
   </section>
 
@@ -610,5 +639,6 @@
 </footer>
 
 <script src="/assets/nav.js"></script>
+<script src="/assets/whitepaper.js"></script>
 </body>
 </html>
