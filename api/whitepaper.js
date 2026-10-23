@@ -5,6 +5,8 @@
 // Benoetigte Vercel-Umgebungsvariablen (Project Settings -> Environment Variables):
 //   BREVO_API_KEY     (erforderlich)  v3-API-Key aus Brevo
 //   BREVO_LIST_ID     (optional)      Zahl: Newsletter-Liste fuer Opt-in
+//   BREVO_TEMPLATE_ID (optional)      Zahl: transaktionale Brevo-Vorlage fuer die Whitepaper-Mail
+//                                     (Platzhalter: {{ params.TITLE }}, {{ params.DOWNLOAD_URL }}, {{ params.EMAIL }})
 //   WP_SENDER_EMAIL   (optional)      Standard: kontakt@beratung-hagl.de  (in Brevo verifizierter Absender)
 //   WP_NOTIFY_EMAIL   (optional)      Standard: kontakt@beratung-hagl.de  (Benachrichtigungsadresse)
 
@@ -82,19 +84,40 @@ module.exports = async function handler(req, res) {
     catch (e) { if (e.status !== 400) throw e; } // 400 = existiert bereits -> ok
 
     // 2) Whitepaper an den Interessenten (Absender kontakt@)
-    await brevo("/smtp/email", {
+    //    Wenn BREVO_TEMPLATE_ID gesetzt ist, wird die in Brevo gestaltete Vorlage genutzt
+    //    (Platzhalter dort: {{ params.TITLE }}, {{ params.DOWNLOAD_URL }}, {{ params.EMAIL }}).
+    //    Sonst wird die untenstehende HTML-Mail mit CI-Button und Signatur verschickt.
+    const mailToUser = {
       sender: { name: "Beratungsunternehmen Hagl", email: SENDER },
       to: [{ email }],
       replyTo: { email: NOTIFY, name: "Beratungsunternehmen Hagl" },
-      subject: "Ihr Whitepaper: " + wp.title,
-      htmlContent:
-        '<div style="font-family:Arial,sans-serif;font-size:15px;color:#1a1a1a;line-height:1.6">' +
-        "<p>Vielen Dank für Ihr Interesse. Hier ist Ihr Whitepaper:</p>" +
-        '<p><a href="' + link + '" style="color:#517F34;font-weight:bold">' + wp.title + " herunterladen (PDF)</a></p>" +
-        "<p>Bei Fragen erreichen Sie mich direkt unter kontakt@beratung-hagl.de oder 0170 4792475.</p>" +
-        "<p>Herzliche Grüße<br>Andreas Hagl<br>Beratungsunternehmen Hagl</p>" +
-        "</div>",
-    }, key);
+    };
+    const templateId = parseInt(process.env.BREVO_TEMPLATE_ID || "", 10);
+    if (Number.isFinite(templateId)) {
+      mailToUser.templateId = templateId;
+      mailToUser.params = { TITLE: wp.title, DOWNLOAD_URL: link, EMAIL: email };
+    } else {
+      mailToUser.subject = "Ihr Whitepaper: " + wp.title;
+      mailToUser.htmlContent =
+        '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#1a1a1a;line-height:1.6;max-width:560px">' +
+        "<p>Guten Tag,</p>" +
+        "<p>vielen Dank für Ihr Interesse. Hier ist Ihr Whitepaper <strong>„" + wp.title + "“</strong>:</p>" +
+        '<p style="margin:24px 0"><a href="' + link + '" style="background:#517F34;color:#ffffff;text-decoration:none;padding:12px 22px;font-weight:bold;display:inline-block">Whitepaper herunterladen (PDF)</a></p>' +
+        '<p style="font-size:13px;color:#4a4a4a">Falls der Button nicht funktioniert, nutzen Sie diesen Link:<br>' +
+        '<a href="' + link + '" style="color:#517F34">' + link + "</a></p>" +
+        "<p>Bei Fragen melden Sie sich gern direkt bei mir.</p>" +
+        '<hr style="border:none;border-top:1px solid #e0e0e0;margin:24px 0">' +
+        '<table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#4a4a4a;line-height:1.5"><tr><td>' +
+        '<strong style="color:#1a1a1a">Andreas Hagl</strong><br>' +
+        "Strategieberater &amp; Wirkungs-Architekt<br>" +
+        "Beratungsunternehmen Hagl<br>" +
+        "Schulstr. 15 · 84104 Rudelzhausen<br>" +
+        'Tel. <a href="tel:+491704792475" style="color:#517F34">0170 4792475</a> · ' +
+        '<a href="mailto:kontakt@beratung-hagl.de" style="color:#517F34">kontakt@beratung-hagl.de</a><br>' +
+        '<a href="https://andreas-hagl.de" style="color:#517F34">andreas-hagl.de</a>' +
+        "</td></tr></table></div>";
+    }
+    await brevo("/smtp/email", mailToUser, key);
 
     // 3) Benachrichtigung an Beratung Hagl (bei jeder Anforderung)
     await brevo("/smtp/email", {
