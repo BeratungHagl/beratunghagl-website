@@ -89,9 +89,9 @@ a { color: var(--gruen-dark); }
 .nav__links a {
   color: var(--mittelgrau);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  padding: 8px 12px;
+  padding: 8px 9px;
   border-radius: 6px;
   transition: background 0.15s, color 0.15s;
   white-space: nowrap;
@@ -204,7 +204,7 @@ ul.check li::before {
   padding: 28px;
 }
 .hero-visual svg { width: 100%; height: auto; display: block; }
-.hero .btn-row .btn-lg { padding: 15px 20px; }
+.hero .btn-row .btn-lg { padding: 14px 15px; }
 
 /* ---------- Auszeichnungs-/Netzwerk-Streifen ---------- */
 .credbar { border-top: 1px solid var(--rahmen); border-bottom: 1px solid var(--rahmen); background: var(--weiss); }
@@ -461,6 +461,116 @@ footer .social a {
 .legal h3 { margin-top: 24px; }
 .legal address { font-style: normal; }
 
+/* ---------- Definition block (B.3) ---------- */
+.definition {
+  background: var(--gruen-tint);
+  border-left: 4px solid var(--gruen);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 22px;
+  margin: 22px 0;
+  font-size: 1.04rem;
+}
+.definition strong { color: var(--gruen-dark); }
+
+/* ---------- Feature tiles (Kernbotschaften, #F2F2F2 + grüne Oberkante) ---------- */
+.feature {
+  background: var(--hellgrau);
+  border-top: 3px solid var(--gruen);
+  border-radius: 12px;
+  padding: 22px 22px 18px;
+}
+.feature h3 { margin: 0 0 8px; font-size: 1.08rem; }
+.feature p { margin: 0; color: var(--mittelgrau); font-size: 0.96rem; }
+
+/* ---------- Content tables with green header (Cockpit-Tabelle u. a., B.3) ---------- */
+.ltab {
+  width: 100%; border-collapse: collapse; margin: 22px 0;
+  border: 1px solid var(--rahmen); font-size: 0.97rem;
+}
+.ltab th, .ltab td {
+  text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--rahmen); vertical-align: top;
+}
+.ltab thead th { background: var(--gruen); color: #fff; font-weight: 700; letter-spacing: -0.01em; }
+.ltab tbody th { background: var(--hellgrau); font-weight: 700; color: #1a1a1a; width: 38%; }
+.ltab tbody td { color: #2a2a2a; }
+.ltab tbody tr:last-child th, .ltab tbody tr:last-child td { border-bottom: none; }
+
+/* ---------- Zwei-Stufen-Grafik (Erstgespräch → STRATEGIEHAUS → Umsetzung) ---------- */
+.stufen {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch; gap: 14px; margin: 26px 0;
+}
+.stufen .stufe {
+  background: var(--weiss); border: 1px solid var(--rahmen); border-radius: 14px; padding: 22px 20px;
+}
+.stufen .stufe .st-k {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gruen); margin: 0 0 8px;
+}
+.stufen .stufe h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.stufen .stufe p { margin: 0; font-size: 0.93rem; color: var(--mittelgrau); }
+.stufen .stufe.fill { background: var(--gruen); border-color: var(--gruen); color: #fff; }
+.stufen .stufe.fill .st-k, .stufen .stufe.fill h3 { color: #fff; }
+.stufen .stufe.fill p { color: #eaf2e0; }
+.stufen .arrow {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gruen); font-size: 1.7rem; font-weight: 700; line-height: 1;
+}
+
+/* ---------- Whitepaper download list ---------- */
+.wp-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 22px 0; }
+.wp-list a {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  border: 1px solid var(--rahmen); border-radius: 10px; padding: 16px 18px;
+  text-decoration: none; color: #1a1a1a; font-weight: 700; font-size: 0.96rem;
+  background: var(--weiss); transition: border-color 0.15s, box-shadow 0.15s;
+}
+.wp-list a:hover { border-color: var(--gruen); box-shadow: 0 6px 20px rgba(81, 127, 52, 0.1); }
+.wp-list a .dl {
+  font-size: 0.78rem; font-weight: 600; color: var(--gruen-dark);
+  background: var(--gruen-tint); border-radius: 999px; padding: 4px 12px; white-space: nowrap;
+}
+
+/* ---------- Whitepaper request form ---------- */
+.wp-titles { margin: 18px 0 6px; padding-left: 20px; }
+.wp-titles li { margin: 0 0 8px; font-weight: 600; color: #2a2a2a; }
+.wp-titles li::marker { color: var(--gruen); }
+.wp-form {
+  background: var(--weiss); border: 1px solid var(--rahmen); border-radius: 14px;
+  padding: 22px 22px 20px; margin: 20px 0; display: grid; gap: 14px; max-width: 640px;
+}
+.wp-form .row { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+.wp-form label { font-size: 0.86rem; font-weight: 600; color: #2a2a2a; display: flex; flex-direction: column; gap: 6px; }
+.wp-form input[type="email"], .wp-form select {
+  font-family: var(--ff); font-size: 0.98rem; padding: 11px 12px;
+  border: 1px solid var(--rahmen); border-radius: 8px; background: #fff; color: #1a1a1a; width: 100%;
+}
+.wp-form input[type="email"]:focus, .wp-form select:focus {
+  outline: 2px solid var(--gruen); outline-offset: 1px; border-color: var(--gruen);
+}
+.wp-form .check-inline { flex-direction: row; align-items: flex-start; gap: 9px; font-weight: 500; color: var(--mittelgrau); font-size: 0.9rem; }
+.wp-form .check-inline input { margin-top: 3px; flex: 0 0 auto; }
+.wp-form button { justify-self: start; }
+.wp-form .wp-status { margin: 0; font-size: 0.9rem; min-height: 1.1em; }
+.wp-form .wp-status.wp-error { color: #b3261e; font-weight: 600; }
+.wp-form .wp-note { font-size: 0.82rem; color: var(--mittelgrau); margin: 2px 0 0; }
+.wp-success { color: var(--gruen-dark); font-weight: 600; margin: 0; }
+@media (max-width: 620px) { .wp-form .row { grid-template-columns: 1fr; } }
+
+/* ---------- Green CTA section (B.3: grüne Fläche, weißer Text) ---------- */
+section.gruen { background: var(--gruen); color: #fff; border-top: none; }
+section.gruen h2, section.gruen h3 { color: #fff; }
+section.gruen p.lead, section.gruen .muted { color: #eaf2e0; }
+section.gruen .eyebrow { color: #d7ebc5; }
+section.gruen .btn-primary { background: #fff; color: var(--gruen-dark); }
+section.gruen .btn-primary:hover { background: var(--gruen-tint); }
+section.gruen .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.55); }
+section.gruen .btn-ghost:hover { border-color: #fff; color: #fff; background: rgba(255, 255, 255, 0.08); }
+
+/* ---------- Cards: 3-column variant (5 Leistungen wrap 3+2) ---------- */
+.cards.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero__grid { grid-template-columns: 1fr; }
@@ -473,7 +583,14 @@ footer .social a {
 }
 @media (max-width: 820px) {
   .triple, .funding, .testimonials, .reflist, .numgrid { grid-template-columns: 1fr; }
-  .duo, .cards, .cards.cols-4 { grid-template-columns: 1fr; }
+  .duo, .cards, .cards.cols-4, .cards.cols-3, .wp-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .stufen { grid-template-columns: 1fr; }
+  .stufen .arrow { transform: rotate(90deg); font-size: 1.4rem; }
+}
+@media (max-width: 620px) {
+  .ltab tbody th { width: auto; }
 }
 @media (max-width: 720px) {
   body { font-size: 16px; }
