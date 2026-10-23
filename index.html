@@ -23,7 +23,9 @@
 <link rel="icon" type="image/png" href="/assets/logo-mark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 <link rel="stylesheet" href="/assets/styles.css" />
 <script type="application/ld+json">
 {
@@ -189,12 +191,12 @@
   <aside class="credbar" aria-label="Auszeichnungen und Netzwerk">
     <div class="credbar__inner">
       <span class="lbl">Autorisiert &amp; ausgezeichnet</span>
-      <img class="badge-inqa" src="/assets/inqa-badge.jpg" alt="Autorisierter INQA-Coach 2026–2027 — Agil in die digitale Zukunft" width="200" height="200" />
-      <img class="badge-seal" src="/assets/siegel-beratungsqualitaet-2026.png" alt="Alchimedus Siegel — Geprüfte Beratungsqualität 2026, 5 Sterne" width="150" height="200" />
-      <img class="badge-manifesto" src="/assets/badge-ki-manifesto.png" alt="Unterstützer des Human-First-AI-Manifesto 2026" width="240" height="240" />
+      <img loading="lazy" decoding="async" class="badge-inqa" src="/assets/inqa-badge.jpg" alt="Autorisierter INQA-Coach 2026–2027 — Agil in die digitale Zukunft" width="200" height="200" />
+      <img loading="lazy" decoding="async" class="badge-seal" src="/assets/siegel-beratungsqualitaet-2026.png" alt="Alchimedus Siegel — Geprüfte Beratungsqualität 2026, 5 Sterne" width="150" height="200" />
+      <img loading="lazy" decoding="async" class="badge-manifesto" src="/assets/badge-ki-manifesto.png" alt="Unterstützer des Human-First-AI-Manifesto 2026" width="240" height="240" />
       <span class="lbl">Mitglied im</span>
       <a href="https://www.alchimedus.de/beraterstandorte/beratungsunternehmen-hagl-2/" target="_blank" rel="noopener" aria-label="Profil von Beratung Hagl im Alchimedus Consulting Network">
-        <img class="badge-acn" src="/assets/acn-logo.png" alt="Mitglied im Alchimedus Consulting Network" width="480" height="200" />
+        <img loading="lazy" decoding="async" class="badge-acn" src="/assets/acn-logo.png" alt="Mitglied im Alchimedus Consulting Network" width="480" height="200" />
       </a>
     </div>
   </aside>
@@ -361,7 +363,7 @@
     <div class="wrap">
       <div class="about__grid">
         <figure class="about__photo">
-          <img src="/assets/andreas-hagl.jpg" alt="Andreas Hagl — Strategieberater, Wirkungs-Architekt und aktiver Verkehrspilot" width="600" height="750" />
+          <img loading="lazy" decoding="async" src="/assets/andreas-hagl.jpg" alt="Andreas Hagl — Strategieberater, Wirkungs-Architekt und aktiver Verkehrspilot" width="600" height="750" />
           <figcaption>Andreas Hagl · Wirkungs-Architekt &amp; autorisierter INQA-Coach</figcaption>
         </figure>
         <div class="about__text">
@@ -385,7 +387,7 @@
     <div class="wrap">
       <div class="partner__grid">
         <a class="partner__logo" href="https://www.alchimedus.de/beraterstandorte/beratungsunternehmen-hagl-2/" target="_blank" rel="noopener" aria-label="Profil von Beratung Hagl im Alchimedus Consulting Network">
-          <img src="/assets/acn-logo.png" alt="Alchimedus Consulting Network" width="480" height="200" />
+          <img loading="lazy" decoding="async" src="/assets/acn-logo.png" alt="Alchimedus Consulting Network" width="480" height="200" />
         </a>
         <div class="partner__text">
           <p class="eyebrow">Netzwerk</p>
@@ -590,7 +592,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <a class="fbrand" href="/"><img src="/assets/logo-mark.png" alt="Beratung Hagl" /> Beratung Hagl</a>
+        <a class="fbrand" href="/"><img loading="lazy" decoding="async" src="/assets/logo-mark.png" alt="Beratung Hagl" /> Beratung Hagl</a>
         <p class="small" style="max-width:300px;">Andreas Hagl · Strategieberater &amp; Wirkungs-Architekt.
           Strategie, Positionierung, Prozesse, Compliance und KI für Unternehmen mit 10 bis 100
           Mitarbeitern — förderfähig über BAFA und INQA.</p>

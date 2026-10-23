@@ -22,7 +22,9 @@
 <link rel="icon" type="image/png" href="/assets/logo-mark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 <link rel="stylesheet" href="/assets/styles.css" />
 <script type="application/ld+json">
 {
@@ -215,7 +217,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <a class="fbrand" href="/"><img src="/assets/logo-mark.png" alt="Beratung Hagl" /> Beratung Hagl</a>
+        <a class="fbrand" href="/"><img loading="lazy" decoding="async" src="/assets/logo-mark.png" alt="Beratung Hagl" /> Beratung Hagl</a>
         <p class="small" style="max-width:300px;">Andreas Hagl · Strategieberater &amp; Wirkungs-Architekt.
           Strategie, Positionierung, Prozesse, Compliance und KI für Unternehmen mit 10 bis 100
           Mitarbeitern — förderfähig über BAFA und INQA.</p>
