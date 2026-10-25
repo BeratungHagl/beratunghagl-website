@@ -556,6 +556,8 @@ footer .social a {
 .wp-form .wp-status.wp-error { color: #b3261e; font-weight: 600; }
 .wp-form .wp-note { font-size: 0.82rem; color: var(--mittelgrau); margin: 2px 0 0; }
 .wp-success { color: var(--gruen-dark); font-weight: 600; margin: 0; }
+/* Honeypot gegen Bots: unsichtbar, nicht fokussierbar, nicht vom Screenreader gelesen */
+.wp-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 @media (max-width: 620px) { .wp-form .row { grid-template-columns: 1fr; } }
 
 /* ---------- Green CTA section (B.3: grüne Fläche, weißer Text) ---------- */
