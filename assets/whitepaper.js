@@ -2,6 +2,10 @@
 // zeigt Erfolg + Direkt-Download oder eine Fehlermeldung an.
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("form.wp-form").forEach(function (form) {
+    // Zeitfalle: Ladezeitpunkt des Formulars festhalten (Bots senden sofort).
+    var tsEl = form.querySelector('[name="ts"]');
+    if (tsEl) tsEl.value = String(Date.now());
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var status = form.querySelector(".wp-status");
@@ -9,9 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
       var emailEl = form.querySelector('[name="email"]');
       var wpEl = form.querySelector('[name="wp"]');
       var nlEl = form.querySelector('[name="newsletter"]');
+      var hpEl = form.querySelector('[name="website"]');
       var email = emailEl ? emailEl.value.trim() : "";
       var wp = wpEl ? wpEl.value : (form.dataset.wp || "");
       var newsletter = nlEl ? nlEl.checked : false;
+      var website = hpEl ? hpEl.value : "";
+      var ts = tsEl ? tsEl.value : "";
 
       function fail(msg) {
         if (status) { status.className = "wp-status wp-error"; status.textContent = msg; }
@@ -26,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch("/api/whitepaper", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email: email, wp: wp, newsletter: newsletter }),
+        body: JSON.stringify({ email: email, wp: wp, newsletter: newsletter, website: website, ts: ts }),
       })
         .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
         .then(function (res) {

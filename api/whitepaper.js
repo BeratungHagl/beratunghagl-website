@@ -27,6 +27,15 @@ function isEmail(x) {
   return typeof x === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x) && x.length <= 254;
 }
 
+// Erlaubte Herkunft: die eigene Domain (inkl. www) und Vercel-Preview-Deploys.
+function hostAllowed(v) {
+  if (!v) return false;
+  try {
+    const h = new URL(v).host.toLowerCase();
+    return h === "andreas-hagl.de" || h.endsWith(".andreas-hagl.de") || h.endsWith(".vercel.app");
+  } catch (e) { return false; }
+}
+
 async function brevo(path, body, key) {
   const r = await fetch("https://api.brevo.com/v3" + path, {
     method: "POST",
@@ -54,6 +63,15 @@ module.exports = async function handler(req, res) {
   if (typeof body === "string") { try { body = JSON.parse(body); } catch (e) { body = {}; } }
   body = body || {};
 
+  // --- Bot-Schutz 1: Origin/Referer. Echte Anfragen kommen vom Browser auf
+  // andreas-hagl.de (oder einem Vercel-Preview). Direkte Skript-POSTs ohne
+  // passenden Origin/Referer werden abgewiesen. ---
+  const origin = req.headers.origin || "";
+  const referer = req.headers.referer || req.headers.referrer || "";
+  if (!hostAllowed(origin) && !hostAllowed(referer)) {
+    return res.status(403).json({ ok: false, error: "Ungültige Anfrage." });
+  }
+
   const email = (body.email || "").trim();
   const wpKey = (body.wp || "").trim();
   const newsletter = body.newsletter === true || body.newsletter === "true" || body.newsletter === "on";
@@ -64,6 +82,22 @@ module.exports = async function handler(req, res) {
 
   const key = process.env.BREVO_API_KEY;
   const link = BASE + "/downloads/" + wp.file;
+
+  // --- Bot-Schutz 2: Honeypot. Das versteckte Feld "website" bleibt bei echten
+  // Nutzern leer; ist es gefüllt, ist es ein Bot. Wir antworten scheinbar
+  // erfolgreich (ohne Versand/Kontaktanlage), um den Bot nicht anzulernen. ---
+  if ((body.website || "").toString().trim() !== "") {
+    return res.status(200).json({ ok: true, url: link, title: wp.title });
+  }
+
+  // --- Bot-Schutz 3: Zeitfalle. Das Frontend setzt beim Laden einen Zeitstempel.
+  // Fehlt er oder wird in unter 2 s / nach über 24 h abgesendet, ist es ein Bot.
+  // Auch hier scheinbarer Erfolg ohne Versand. ---
+  const ts = parseInt(body.ts, 10);
+  const elapsed = Date.now() - ts;
+  if (!Number.isFinite(ts) || elapsed < 2000 || elapsed > 24 * 3600 * 1000) {
+    return res.status(200).json({ ok: true, url: link, title: wp.title });
+  }
 
   if (!key) {
     // Fehlende Konfiguration: nicht 200 melden, damit das Frontend einen Hinweis zeigt.
