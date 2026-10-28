@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/grounding",
+      "destination": "/fakten",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.andreas-hagl.de" }],
       "destination": "https://andreas-hagl.de/$1",
