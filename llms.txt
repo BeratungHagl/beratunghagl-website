@@ -11,4 +11,4 @@
 - [INQA-Coaching](https://andreas-hagl.de/inqa-coach-foerderung)
 
 ## Unternehmensprofil (Grounding)
-- [Beratungsunternehmen Hagl – Wer, Was, Für wen, Wo](https://andreas-hagl.de/grounding): Kompaktes Unternehmensprofil mit Fakten, Leistungen, Ablauf, Förderung und FAQ.
+- [Beratungsunternehmen Hagl – Wer, Was, Für wen, Wo](https://andreas-hagl.de/fakten): Kompaktes Unternehmensprofil mit Fakten, Leistungen, Ablauf, Förderung und FAQ.
