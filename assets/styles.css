@@ -558,6 +558,34 @@ footer .social a {
 .wp-success { color: var(--gruen-dark); font-weight: 600; margin: 0; }
 /* Honeypot gegen Bots: unsichtbar, nicht fokussierbar, nicht vom Screenreader gelesen */
 .wp-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+
+/* ---------- Partner-/Empfehlungsliste (/empfehlungen) ---------- */
+.partner-list { display: grid; gap: 18px; margin: 24px 0; }
+.partner {
+  background: var(--weiss); border: 1px solid var(--rahmen); border-left: 3px solid var(--gruen);
+  border-radius: 12px; padding: 24px 26px;
+  display: grid; grid-template-columns: 160px 1fr; gap: 26px; align-items: start;
+}
+.partner .plogo {
+  width: 160px; height: 96px; border: 1px solid var(--rahmen); border-radius: 8px; background: #fff;
+  display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 12px;
+}
+.partner .plogo img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+.partner .plogo .ph { font-size: 0.78rem; font-weight: 600; color: var(--kraeftiggrau); text-align: center; }
+.partner .pbody > :first-child { margin-top: 0; }
+.partner h3 { margin: 0 0 2px; font-size: 1.22rem; }
+.partner .role { color: var(--gruen-dark); font-weight: 600; font-size: 0.95rem; margin: 0 0 12px; }
+.partner .pweb { font-size: 0.96rem; font-weight: 600; margin: 0 0 14px; }
+.partner p { margin: 0 0 10px; }
+.partner .pbody p:last-child { margin-bottom: 0; }
+.partner .lbl { font-weight: 700; color: #1a1a1a; }
+.partner.placeholder { border-style: dashed; border-left-color: var(--kraeftiggrau); background: var(--hellgrau); }
+.partner.placeholder .plogo { border-style: dashed; background: transparent; }
+.partner.placeholder .role { color: var(--mittelgrau); }
+@media (max-width: 620px) {
+  .partner { grid-template-columns: 1fr; gap: 16px; }
+  .partner .plogo { width: 100%; max-width: 220px; }
+}
 @media (max-width: 620px) { .wp-form .row { grid-template-columns: 1fr; } }
 
 /* ---------- Green CTA section (B.3: grüne Fläche, weißer Text) ---------- */
