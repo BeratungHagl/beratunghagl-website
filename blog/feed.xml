@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beratungsunternehmen Hagl — Blog</title>
+    <link>https://andreas-hagl.de/blog</link>
+    <atom:link href="https://andreas-hagl.de/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Blog von Andreas Hagl: Praxisberichte und Impulse zu Strategie, Organisation, KI, Digitalisierung und Förderung für kleine und mittlere Unternehmen.</description>
+    <language>de-DE</language>
+    <lastBuildDate>Fri, 20 Nov 2026 08:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Co-Pilot statt Autopilot: Wie ein KI-Assistent meine Mailflut bändigt — ohne den persönlichen Ton zu verlieren</title>
+      <link>https://andreas-hagl.de/blog/co-pilot-statt-autopilot-ki-e-mail-assistent</link>
+      <guid isPermaLink="true">https://andreas-hagl.de/blog/co-pilot-statt-autopilot-ki-e-mail-assistent</guid>
+      <pubDate>Fri, 20 Nov 2026 08:00:00 +0000</pubDate>
+      <category>KI &amp; Digitalisierung</category>
+      <description>Wie viel Ihrer Arbeitswoche gehört eigentlich Ihrem Postfach? Warum ein KI-Assistent Entwürfe vorbereiten, aber nie selbst versenden sollte — und welche drei Prinzipien mehr entscheiden als die Technik.</description>
+    </item>
+  </channel>
+</rss>

@@ -10,5 +10,11 @@
 - [Förderung](https://andreas-hagl.de/foerdermittelberatung)
 - [INQA-Coaching](https://andreas-hagl.de/inqa-coach-foerderung)
 
+<!-- BLOG:START -->
+## Blog
+- [Blog-Übersicht](https://andreas-hagl.de/blog): Blog von Andreas Hagl: Praxisberichte und Impulse zu Strategie, Organisation, KI, Digitalisierung und Förderung für kleine und mittlere Unternehmen.
+- [Co-Pilot statt Autopilot: Wie ein KI-Assistent meine Mailflut bändigt — ohne den persönlichen Ton zu verlieren](https://andreas-hagl.de/blog/co-pilot-statt-autopilot-ki-e-mail-assistent): Wie ein DSGVO-konformer KI-Assistent Antwortentwürfe vorbereitet — ohne automatischen Versand, ohne erfundene Angaben und im eigenen Ton. Ein Praxisbericht.
+<!-- BLOG:END -->
+
 ## Unternehmensprofil (Grounding)
 - [Beratungsunternehmen Hagl – Wer, Was, Für wen, Wo](https://andreas-hagl.de/fakten): Kompaktes Unternehmensprofil mit Fakten, Leistungen, Ablauf, Förderung und FAQ.
