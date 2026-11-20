@@ -58,6 +58,15 @@ Impressum/Datenschutz enthalten echte, geprüfte Daten (Adresse, USt-ID,
 Berufshaftpflicht). Bei Änderungen an eingebundenen Diensten IMMER auch
 `datenschutz/index.html` aktualisieren.
 
+## Blog (/blog)
+- Quellen: `_blog/posts/<slug>.html` (Kopfblock zwischen `---` + HTML-Body). Dateiname = URL-Slug.
+- Nach jeder Änderung: `python _blog/build.py` im Repo-Root → erzeugt `blog/index.html`,
+  `blog/<slug>/index.html`, `blog/feed.xml` und aktualisiert die Marker-Blöcke in `index.html`
+  (Startseiten-Teaser), `sitemap.xml` und `llms.txt`. Erzeugte Dateien nie von Hand ändern.
+- Nav/Footer übernimmt der Generator aus `index.html` — nach Nav-/Footer-Änderungen neu bauen.
+- `_blog/`, `CLAUDE.md`, `README.md` werden per `.vercelignore` nicht ausgeliefert.
+- Entwürfe: `draft: true` im Kopfblock → wird nicht veröffentlicht.
+
 ## Deploy
 Nicht eigenmächtig deployen – nur auf ausdrückliche Ansage
 (siehe [[feedback-superanalyst-deploy]], gilt sinngemäß für alle Hagl-Projekte).

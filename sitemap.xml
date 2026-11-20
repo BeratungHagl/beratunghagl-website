@@ -54,6 +54,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- BLOG:START -->
+  <url>
+    <loc>https://andreas-hagl.de/blog</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andreas-hagl.de/blog/co-pilot-statt-autopilot-ki-e-mail-assistent</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- BLOG:END -->
   <url>
     <loc>https://andreas-hagl.de/fakten</loc>
     <lastmod>2026-10-28</lastmod>
