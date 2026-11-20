@@ -329,7 +329,6 @@ def render_index(posts, nav, footer):
         </div>
         <div class="btn-row" style="margin:0;">
           <a class="btn btn-primary" href="{NEWSLETTER}" target="_blank" rel="noopener">Newsletter anmelden</a>
-          <a class="btn btn-ghost" href="/blog/feed.xml">RSS-Feed</a>
         </div>
       </div>
     </div>
