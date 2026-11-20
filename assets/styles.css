@@ -732,3 +732,44 @@ section.gruen .btn-ghost:hover { border-color: #fff; color: #fff; background: rg
   .author-box { flex-direction: column; align-items: flex-start; }
   .post-list { grid-template-columns: 1fr; }
 }
+/* ---------- Navigation: Untermenü "Leistungen" ---------- */
+.nav__group { position: relative; }
+.nav__group-toggle {
+  font: inherit; font-size: 0.88rem; font-weight: 500; color: var(--mittelgrau);
+  background: none; border: 0; padding: 8px 9px; border-radius: 6px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.nav__group-toggle::after {
+  content: ""; width: 6px; height: 6px; border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor;
+  transform: translateY(-2px) rotate(45deg); transition: transform 0.15s;
+}
+.nav__group.open > .nav__group-toggle::after { transform: translateY(1px) rotate(225deg); }
+.nav__group-toggle:hover,
+.nav__group-toggle[data-current],
+.nav__group.open > .nav__group-toggle { background: var(--gruen-tint); color: var(--gruen-dark); }
+.nav__sub {
+  position: absolute; top: 100%; left: 0; z-index: 60; margin-top: 6px; min-width: 260px;
+  display: none; flex-direction: column; gap: 2px; padding: 6px;
+  background: #fff; border: 1px solid var(--rahmen); border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+}
+.nav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
+.nav__sub a { padding: 10px 12px; }
+.nav__group.open .nav__sub { display: flex; }
+@media (hover: hover) and (min-width: 721px) {
+  .nav__group:hover .nav__sub { display: flex; }
+  .nav__group:hover > .nav__group-toggle::after { transform: translateY(1px) rotate(225deg); }
+}
+@media (max-width: 720px) {
+  .nav__group-toggle {
+    width: 100%; justify-content: space-between;
+    padding: 14px 6px; border-bottom: 1px solid var(--rahmen); border-radius: 0;
+  }
+  .nav__group-toggle[data-current] { background: none; }
+  .nav__sub {
+    position: static; margin: 0; min-width: 0; padding: 0 0 0 14px;
+    border: 0; border-radius: 0; box-shadow: none; background: transparent;
+  }
+  .nav__sub::before { display: none; }
+}
