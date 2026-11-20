@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="de"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20.000 € Zukunftspaket | Alchimedus Consulting Network</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="/assets/logo-mark.png">
+<meta name="description" content="20.000 € Zukunftspaket für kleine und mittlere Unternehmen: Standortbestimmung und konkrete Zukunftsprojekte, mit 65–80 % möglicher Förderung.">
+<style>
+:root{
+  --orange:#E96919; --orange-dark:#C64D08; --orange-soft:#FFF0E5; --ink:#1B2433; --muted:#5B6472; --line:#E3E5E8; --bg:#FFFFFF; --grey:#F2F2F0; --navy:#142033;
+  --low:#B8502C; --mid:#B07A12; --high:#2E7A4E;
+  --font:"Segoe UI","Helvetica Neue",Arial,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);font-size:17px;line-height:1.55}
+img{max-width:100%;height:auto}
+a{color:var(--orange-dark)}
+h1,h2,h3{line-height:1.12;margin:0}
+p{margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;border:0;border-radius:999px;background:var(--orange-dark);color:#fff;font:700 16px var(--font);padding:13px 24px;cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{background:#A83F05}.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #1B2433;outline-offset:2px}
+.btn.ghost{background:#fff;color:var(--ink);border:2px solid var(--line)}
+.btn.ghost:hover{border-color:var(--orange)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+/* Navigation */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:0}
+.logo img{display:block;max-height:46px;max-width:200px;width:auto;height:auto}
+.logo .txt{font:800 20px var(--font);letter-spacing:-.01em}
+.logo .acn{display:flex;flex-direction:column;border-left:2px solid var(--line);padding-left:12px;font:600 10px/1.3 var(--font);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.logo .acn b{color:var(--orange-dark);font-size:11px}
+.nav .btn{padding:10px 18px;font-size:15px}
+/* Hero */
+.hero{margin:0;padding:20px 20px 0}
+.hero img{display:block;width:100%;max-width:1080px;height:auto;margin:0 auto;border-radius:18px}
+/* Abschnitte */
+section{padding:48px 0}
+section[id]{scroll-margin-top:76px}
+.eyebrow{font:700 13px var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--orange-dark);margin-bottom:10px}
+h2.big{font-size:clamp(26px,4.4vw,38px);font-weight:800;font-style:italic;letter-spacing:-.01em}
+h3.or{color:var(--orange-dark);font-size:clamp(22px,3.4vw,28px);font-weight:800;font-style:italic;margin:22px 0 8px}
+.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.cols .l p{margin-top:14px;color:#2B3544}
+.divider{border-left:3px solid var(--orange);padding-left:34px}
+.items{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.items li{display:flex;gap:16px;align-items:center;font-weight:600;line-height:1.3}
+.ic{flex:none;width:52px;height:52px;border-radius:12px;background:var(--orange);display:flex;align-items:center;justify-content:center}
+.ic svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.facts{background:var(--grey);border-radius:20px;padding:28px 32px;display:grid;grid-template-columns:1fr 1.1fr 1.4fr;gap:0;align-items:center}
+.facts>div{padding:0 26px;border-left:3px solid var(--orange)}
+.facts>div:first-child{border-left:0;padding-left:0}
+.facts h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;font-style:italic}
+.facts .pct{font-size:clamp(40px,7vw,60px);font-weight:800;font-style:italic;color:var(--orange-dark);line-height:1}
+.facts .own{font-size:17px}
+.facts .own b.or{color:var(--orange-dark)}
+.facts .eig{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.facts .eig b{font-size:1.15em}
+.facts small{display:block;font-style:italic;font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.35}
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.ex .c{border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.ex .c span{font-size:14px;color:var(--muted)}
+.ex .c strong{display:block;font-size:24px;margin:2px 0 6px;color:var(--ink)}
+.ex .c p{font-size:15px;color:var(--muted)}
+.fine{font-size:13.5px;color:var(--muted);margin-top:14px;line-height:1.45}
+.checks{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks svg{flex:none;width:26px;height:26px;stroke:var(--orange);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+.swoosh{width:min(260px,70%);height:10px;margin-top:18px}
+/* Zitatband */
+.quote{position:relative;background:linear-gradient(180deg,#25384F,#0F1826);color:#fff;text-align:center;padding:110px 20px 70px;margin-top:20px}
+.quote svg.m{position:absolute;left:0;right:0;top:-1px;width:100%;height:70px}
+.quote p{max-width:760px;margin:0 auto;font-size:clamp(19px,3vw,26px);font-style:italic;line-height:1.45}
+/* Bausteine */
+.mods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.mod{background:var(--grey);border-radius:14px;padding:20px 18px;border-top:4px solid var(--orange)}
+.mod .n{font:700 12px var(--font);letter-spacing:.1em;color:var(--orange-dark)}
+.mod h3{font-size:18px;margin:6px 0 8px}
+.mod p{font-size:15px;color:#3C4655}
+.komp-lead{margin:12px 0 0;max-width:66ch;color:#3C4655}
+.kn{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+.kn div{background:var(--grey);border-radius:14px;padding:14px 22px;border-left:4px solid var(--orange);min-width:200px}
+.kn b{display:block;font-size:36px;line-height:1.05;font-weight:800;font-style:italic;color:var(--orange-dark)}
+.kn span{font-size:14.5px;color:#3C4655}
+.awards,.books{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:12px}
+.awards img{height:118px;width:auto}
+.books img{height:176px;width:auto}
+@media(max-width:520px){.awards img{height:84px}.books img{height:128px}.awards,.books{gap:10px}}
+/* Quiz */
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,4vw,34px);display:flex;flex-direction:column;gap:20px;box-shadow:0 6px 28px rgba(20,32,51,.06)}
+.bar{height:7px;background:var(--line);border-radius:4px;overflow:hidden}.bar>i{display:block;height:100%;background:var(--orange);transition:width .3s}
+.prow-top{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:6px}
+.ftag{font:700 13px var(--font);color:var(--orange-dark);text-transform:uppercase;letter-spacing:.06em}
+.qt{font-size:clamp(20px,3.2vw,26px);font-weight:700}
+.qh{color:var(--muted);font-size:15px;margin-top:-10px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:14px;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;font-size:16px;line-height:1.45}
+.opt:hover{border-color:var(--orange)}.opt:focus-visible{outline:3px solid #1B2433;outline-offset:2px}
+.opt[aria-pressed="true"]{border-color:var(--orange);background:var(--orange-soft)}
+.opt .dot{flex:none;width:18px;height:18px;border-radius:50%;border:2px solid #B9BEC6;margin-top:2px}
+.opt[aria-pressed="true"] .dot{border-color:var(--orange);background:radial-gradient(var(--orange) 45%,transparent 50%)}
+.navrow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.score{font-size:54px;font-weight:800;line-height:1;color:var(--orange-dark)}.score small{font-size:20px;color:var(--muted);font-weight:600}
+.rhead{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.pill{display:inline-block;color:#fff;font-weight:700;font-size:14px;padding:5px 14px;border-radius:999px;margin-bottom:8px}
+.profile{display:flex;flex-direction:column;gap:12px}.prow .t{display:flex;justify-content:space-between;font-size:15px;margin-bottom:5px}
+.imps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}.imps li{border-left:4px solid var(--orange);padding:4px 0 4px 14px}.imps strong{display:block}.imps span{color:#3C4655;font-size:15.5px}
+form.f{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.f label{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:600}
+form.f .full{grid-column:1/-1}
+input[type=text],input[type=email],input[type=tel],input[type=url]{font:400 16px var(--font);padding:11px 12px;border:1.5px solid #C9CDD3;border-radius:10px;width:100%;background:#fff;color:var(--ink)}
+form.f label.chk{flex-direction:row;gap:10px;font-weight:400;align-items:flex-start}
+form.f label.chk input{margin-top:5px;flex:none}
+.msg{font-size:15px;min-height:1.4em}.msg.err{color:#A32D18}.msg.ok{color:var(--high)}
+h3.s{font-size:20px;font-weight:800}
+.note{font-size:14.5px;color:var(--muted)}
+/* Kontakt */
+.contact{background:var(--navy);color:#fff;border-radius:20px;padding:32px;display:grid;grid-template-columns:auto 1fr 1fr;gap:34px;align-items:center}
+.contact .lg{background:#fff;border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:center;min-width:190px;min-height:96px}
+.contact .lg img{max-width:200px;max-height:76px;display:block}.contact .lg b{color:var(--ink);font-size:20px;text-align:center}
+.contact h2{font-size:22px;font-weight:800;margin-bottom:6px}
+.contact address{font-style:normal;line-height:1.5;color:#E4E8EE}
+.contact ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.contact a{color:#fff;font-weight:600}
+.contact .btn{margin-top:6px;background:var(--orange)}
+.contact .btn:hover{background:#D25A10}
+.ctarow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+/* Footer */
+footer{padding:30px 0 90px;font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);margin-top:30px}
+footer nav{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:10px;font-weight:600}
+.warn{background:#FDECEA;border:1.5px solid #D85C4A;color:#7A1D10;border-radius:10px;padding:10px 14px;font-size:14.5px;margin-top:10px}
+@media(max-width:860px){
+  .cols,.facts,.ex,.contact,form.f{grid-template-columns:1fr}
+  .mods{grid-template-columns:1fr 1fr}
+  .divider{border-left:0;border-top:3px solid var(--orange);padding:24px 0 0}
+  .facts>div{border-left:0;border-top:3px solid var(--orange);padding:18px 0 0;margin-top:18px}.facts>div:first-child{border-top:0;padding-top:0;margin-top:0}
+  .nav .btn{display:none}.nav .wrap{min-height:60px}
+  .logo .acn{display:none}
+}
+@media(max-width:520px){.mods{grid-template-columns:1fr}body{font-size:16.5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar>i{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" id="navLogo" href="#"><span class="txt">Ihre Beratungsfirma</span></a>
+  <a class="btn" href="#check">Zukunftscheck starten →</a>
+</div></header>
+
+<figure class="hero">
+  <img src="/assets/zukunftspaket/hero.jpg" width="1050" height="490" alt="20.000 Euro für die Zukunft Ihres Unternehmens. Mit 65 bis 80 Prozent Förderung. Alchimedus consulting network.">
+  <h1 class="sr">20.000 Euro für die Zukunft Ihres Unternehmens. Mit 65 bis 80 Prozent Förderung.</h1>
+</figure>
+
+<main>
+<section><div class="wrap cols">
+  <div class="l">
+    <h2 class="big">Ein Zukunftspaket, das mehr will als die üblichen Beratungsangebote.</h2>
+    <p>Viele kleinere Unternehmen haben kein Ideenproblem, sondern ein Ressourcenproblem. Sie verfügen über hervorragende Produkte, erfahrene Mitarbeiter und unternehmerisches Gespür, können sich aber die systematische Beschäftigung mit neuen Geschäftsmodellen, technologischen Entwicklungen und veränderten Märkten kaum leisten.</p>
+    <h3 class="or">Genau hier setzen wir an.</h3>
+    <p>Unser 20.000-Euro-Zukunftspaket verbindet eine umfassende Standortbestimmung mit der Entwicklung konkreter unternehmerischer Zukunftsprojekte.</p>
+  </div>
+  <div class="divider">
+    <h2 class="big" style="color:var(--orange-dark)">Was wir gemeinsam entwickeln.</h2>
+    <ul class="items">
+      <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M21 20H3"></path></svg></span>Wettbewerbsposition und Geschäftsmodell analysieren</li>
+      <li><span class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"></rect><path d="M9.5 3v2M14.5 3v2M9.5 19v2M14.5 19v2M3 9.5h2M3 14.5h2M19 9.5h2M19 14.5h2"></path></svg></span>Potenziale der KI nutzen und Produktivität steigern</li>
+      <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M15.5 14.2c2.8-.4 5.5 1.3 5.5 4.3"></path></svg></span>Neue Kunden, Märkte und Wertschöpfung erschließen</li>
+      <li><span class="ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"></ellipse><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path></svg></span>Kostenstrukturen und Wirtschaftlichkeit verbessern</li>
+      <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="12" cy="12" r=".8"></circle></svg></span>Konkrete Projekte, Prioritäten und Verantwortlichkeiten festlegen</li>
+    </ul>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="facts">
+    <div><h2>Die Förderung auf einen Blick.</h2></div>
+    <div><div class="pct">65–80 %</div><p style="margin-top:6px">der förderfähigen Kosten können durch öffentliche Mittel abgedeckt werden.</p></div>
+    <div class="own">Bei einem Projektvolumen von <b>20.000 Euro</b> beträgt Ihr Eigenanteil damit nur<ul class="eig"><li><b class="or">4.000 €</b> in den neuen Bundesländern</li><li><b class="or">bis 5.680 €</b> in den alten Bundesländern und Leipzig</li></ul><small>Voraussetzung: Die Leistungen sind förderfähig und die entsprechenden Bewilligungen liegen vor.</small></div>
+  </div>
+  <p class="fine">Angaben unter der Annahme vollständiger Förderfähigkeit und zulässiger Kombination der Förderbausteine. Keine Förderzusage. Fördervoraussetzungen, Antragsfristen, Vorhabenbeginn und Bewilligung sind vorab individuell zu prüfen. Umsatzsteuerliche Behandlung abhängig vom Einzelfall.</p>
+</div></section>
+
+<section id="check" style="background:var(--grey)"><div class="wrap">
+  <p class="eyebrow">Ihr Einstieg – kostenfrei und unverbindlich</p>
+  <h2 class="big">Wo steht Ihr Unternehmen heute?</h2>
+  <p style="margin:12px 0 22px;color:#3C4655;max-width:62ch">Neun Fragen in etwa drei Minuten. Sie erhalten sofort ein individuelles Profil und erste Handlungsempfehlungen.</p>
+  <div class="panel" id="quiz" aria-live="polite"></div>
+  <div class="panel" id="result" hidden=""></div>
+</div></section>
+
+<section style="padding-top:10px"><div class="wrap cols">
+  <div>
+    <h2 class="big" style="color:var(--orange-dark)">Das Ergebnis.</h2>
+    <ul class="checks">
+      <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7.5 12.5l3 3 6-7"></path></svg>Eine belastbare unternehmerische Zukunftsagenda</li>
+      <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7.5 12.5l3 3 6-7"></path></svg>konkrete Projekte mit wirtschaftlicher Wirkung</li>
+      <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7.5 12.5l3 3 6-7"></path></svg>klare Prioritäten und Verantwortlichkeiten</li>
+      <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7.5 12.5l3 3 6-7"></path></svg>eine nachvollziehbare wirtschaftliche Perspektive</li>
+    </ul>
+  </div>
+  <div class="divider">
+    <h2 class="big" style="color:var(--orange-dark)">Unser Anspruch.</h2>
+    <p style="margin-top:14px">Wir wollen keine Fördermittel verbrauchen, nur weil sie verfügbar sind. Wir wollen mit Ihrer Hilfe wirtschaftliche Möglichkeiten erschließen, die weit über den Wert der eingesetzten Mittel hinausreichen.</p>
+    <svg class="swoosh" viewBox="0 0 260 10" aria-hidden="true"><path d="M2 7c60-6 150-7 256-3" stroke="#E96919" stroke-width="5" stroke-linecap="round" fill="none"></path></svg>
+  </div>
+</div></section>
+
+<div class="quote">
+  <svg class="m" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1200V30L1110 52 1040 22 960 48 880 14 790 50 700 24 610 56 520 20 430 52 340 12 250 48 160 26 80 54 0 34Z" fill="#fff"></path></svg>
+  <p>Denn die Zukunft eines Unternehmens entsteht nicht dadurch, dass man die Vergangenheit etwas effizienter verwaltet. Sondern dadurch, dass man rechtzeitig beginnt, neue Möglichkeiten zu schaffen.</p>
+</div>
+
+<section><div class="wrap">
+  <p class="eyebrow">So gehen wir vor</p>
+  <h2 class="big">Das Zukunftspaket in vier Bausteinen.</h2>
+  <div class="mods">
+    <div class="mod"><span class="n">BAUSTEIN 01</span><h3>360° Strategiehaus-Potenzialanalyse</h3><p>Ganzheitliche Analyse anhand der 18 Felder des Alchimedus Strategiehauses. Stärken, Engpässe und Chancen sichtbar machen.</p></div>
+    <div class="mod"><span class="n">BAUSTEIN 02</span><h3>Wirtschaftliche Potenziale</h3><p>Markt, Kunden, Geschäftsmodell, Kosten, Produktivität und KI-Einsatz auf zusätzliche Wertschöpfung untersuchen.</p></div>
+    <div class="mod"><span class="n">BAUSTEIN 03</span><h3>Zukunftsprojekte entwickeln</h3><p>Konkrete Vorhaben mit erwarteter Wirkung, Investitionsbedarf, Risiken und Verantwortlichkeiten ausarbeiten.</p></div>
+    <div class="mod"><span class="n">BAUSTEIN 04</span><h3>Ihre Zukunftsagenda</h3><p>Priorisierte Roadmap mit umsetzbaren Projekten, wirtschaftlichen Annahmen und klaren nächsten Schritten.</p></div>
+  </div>
+</div></section>
+
+<section id="kompetenz"><div class="wrap">
+  <p class="eyebrow">Kompetenz, die überzeugt</p>
+  <h2 class="big">Hinter dem Zukunftspaket steht ein starkes Netzwerk.</h2>
+  <p class="komp-lead">Das Alchimedus Consulting Network steht mit mehr als 600 Beratungskollegen seit mehr als 26 Jahren im Dienste der Unternehmensberatung. Auszeichnungen und Fachbücher belegen die Kompetenz hinter dem Zukunftspaket.</p>
+  <div class="kn"><div><b>600+</b><span>Beratungskollegen im Netzwerk</span></div><div><b>26+</b><span>Jahre im Dienste der Unternehmensberatung</span></div></div>
+  <h3 class="s" style="margin-top:30px">Ausgezeichnet</h3>
+  <div class="awards"><img src="/assets/zukunftspaket/award-2008.webp" width="144" height="145" alt="Initiative Mittelstand, Innovationspreis-IT 2008, Produkt" loading="lazy"><img src="/assets/zukunftspaket/award-2013.webp" width="140" height="145" alt="Innovationspreis-IT Best of 2013, Qualitätsmanagement" loading="lazy"><img src="/assets/zukunftspaket/award-2015.webp" width="140" height="145" alt="Innovationspreis-IT Best of 2015" loading="lazy"><img src="/assets/zukunftspaket/award-2017.webp" width="141" height="145" alt="Innovationspreis-IT 2017, Mittelstand" loading="lazy"><img src="/assets/zukunftspaket/award-2018.webp" width="141" height="145" alt="Innovationspreis-IT Best of 2018, Business Intelligence" loading="lazy"></div>
+  <h3 class="s" style="margin-top:28px">Veröffentlicht</h3>
+  <div class="books"><img src="/assets/zukunftspaket/buch-alchimedus-prinzip.webp" width="128" height="199" alt="Buchcover: Das Alchimedus-Prinzip" loading="lazy"><img src="/assets/zukunftspaket/buch-alchimedus-methode.webp" width="144" height="199" alt="Buchcover: Die Alchimedus-Methode" loading="lazy"><img src="/assets/zukunftspaket/buch-success-dna.webp" width="132" height="199" alt="Buchcover: Success DNA" loading="lazy"><img src="/assets/zukunftspaket/buch-gesunder-arbeitgeber.webp" width="135" height="199" alt="Buchcover: Gesunder Arbeitgeber" loading="lazy"><img src="/assets/zukunftspaket/buch-digitale-transformation.webp" width="135" height="199" alt="Buchcover: Digitale Transformation im Mittelstand mit System" loading="lazy"><img src="/assets/zukunftspaket/buch-wirkungsprinzip.webp" width="135" height="199" alt="Buchcover: Das Wirkungsprinzip" loading="lazy"></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="contact" id="kontakt">
+    <div class="lg" id="cLogo"></div>
+    <div><h2>Ihr Ansprechpartner</h2><address id="cAddr"></address></div>
+    <div><ul id="cList"></ul><div class="ctarow" id="cCta"></div></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <nav aria-label="Rechtliches"><a id="fImp" href="#">Impressum</a><a id="fDs" href="#">Datenschutz</a><a id="fMain" href="#">Zur Hauptseite</a></nav>
+  <p id="fText"></p>
+  <div class="warn" id="fWarn" hidden=""></div>
+</div></footer>
+
+
+<script type="application/json" id="berater-config">{"firma":"Beratungsunternehmen Hagl","name":"Andreas Hagl","strasse":"Schulstr. 15","ort":"84104 Rudelzhausen","telefon":"0170 4792475","email":"kontakt@beratung-hagl.de","website":"https://andreas-hagl.de","impressumUrl":"https://andreas-hagl.de/impressum","datenschutzUrl":"https://andreas-hagl.de/datenschutz","terminUrl":"https://calendly.com/kontakt-hagl/30min","formEndpoint":"","logo":"/assets/zukunftspaket/logo-hagl.jpg"}</script>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let CFG = {};
+try { CFG = JSON.parse($('berater-config').textContent) || {}; } catch(e) { CFG = {}; }
+const safeUrl = u => /^https?:\/\//i.test(u||'') ? u : '';
+
+/* ---------- Personalisierung ---------- */
+function applyConfig(){
+  const c = CFG, firma = (c.firma||'').trim(), web = safeUrl(c.website);
+  const label = firma || 'Ihre Beratungsfirma';
+  document.title = '20.000 € Zukunftspaket' + (firma ? ' | ' + firma : '') + ' | Alchimedus Consulting Network';
+  const logoHtml = c.logo ? '<img src="'+esc(c.logo)+'" alt="'+esc(label)+'">' : '<span class="txt">'+esc(label)+'</span>';
+  const nl = $('navLogo'); nl.innerHTML = logoHtml + '<span class="acn"><b>Alchimedus®</b>consulting network</span>';
+  nl.href = web || '#'; if (web) { nl.target = '_blank'; nl.rel = 'noopener'; } else { nl.removeAttribute('target'); }
+  $('cLogo').innerHTML = c.logo ? '<img src="'+esc(c.logo)+'" alt="'+esc(label)+'">' : '<b>'+esc(label)+'</b>';
+  $('cAddr').innerHTML = [firma && '<strong>'+esc(firma)+'</strong>', c.name && esc(c.name), c.strasse && esc(c.strasse), c.ort && esc(c.ort)].filter(Boolean).join('<br>') || '<span>Ihre Kontaktdaten erscheinen hier.</span>';
+  const li = [];
+  if (c.telefon) li.push('<li>Telefon: <a href="tel:'+esc(c.telefon.replace(/[^\d+]/g,''))+'">'+esc(c.telefon)+'</a></li>');
+  if (c.email) li.push('<li>E-Mail: <a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></li>');
+  if (web) li.push('<li>Web: <a href="'+esc(web)+'" target="_blank" rel="noopener">'+esc(web.replace(/^https?:\/\//,''))+'</a></li>');
+  $('cList').innerHTML = li.join('');
+  const cta = [];
+  if (safeUrl(c.terminUrl)) cta.push('<a class="btn" href="'+esc(c.terminUrl)+'" target="_blank" rel="noopener">Termin buchen</a>');
+  else cta.push('<a class="btn" href="#check">Zukunftscheck starten</a>');
+  $('cCta').innerHTML = cta.join('');
+  const imp = safeUrl(c.impressumUrl), ds = safeUrl(c.datenschutzUrl);
+  const fi = $('fImp'), fd = $('fDs'), fm = $('fMain');
+  fi.href = imp || '#'; fd.href = ds || '#'; fm.href = web || '#';
+  [fi,fd,fm].forEach(a => { if (a.getAttribute('href') !== '#') { a.target = '_blank'; a.rel = 'noopener'; } else { a.removeAttribute('target'); } });
+  fm.hidden = !web;
+  $('fText').innerHTML = 'Anbieter dieses Angebots: ' + (firma ? '<strong>'+esc(firma)+'</strong>' : 'Ihre Beratungsfirma') + ' im Alchimedus Consulting Network (<a href="https://www.alchimedus.de" target="_blank" rel="noopener">alchimedus.de</a>). Individuelle Beratung durch teilnehmende ACN-Berater. Es handelt sich um ein Angebot ohne Förderzusage.';
+  const miss = [];
+  if (!firma) miss.push('Beratungsfirma'); if (!c.email) miss.push('E-Mail'); if (!imp) miss.push('Impressum-Link'); if (!ds) miss.push('Datenschutz-Link');
+  const w = $('fWarn'); w.hidden = !miss.length;
+  if (miss.length) w.textContent = 'Vor dem Livegang fehlen noch: ' + miss.join(', ') + '. Bitte ergänzen.';
+}
+
+/* ---------- Zukunftscheck ---------- */
+const FIELDS = {
+  S:"Zukunftsbild & Strategie",
+  G:"Geschäftsmodell & Markt",
+  D:"Digitalisierung & KI",
+  W:"Wirtschaftlichkeit",
+  O:"Mitarbeitende & Organisation"
+};
+const Q = [
+ {f:"S", t:"Wie klar ist Ihr Bild davon, wo Ihr Unternehmen in drei bis fünf Jahren stehen soll?",
+  o:["Klar formuliert, mit Zielen hinterlegt und mit dem Team geteilt","In meinem Kopf klar, aber nicht schriftlich festgehalten","Eine grobe Vorstellung, aber ohne konkrete Ziele","Das Tagesgeschäft lässt dafür kaum Raum"],
+  imp:["Zukunftsbild schärfen","Ein schriftliches Zukunftsbild mit drei bis fünf Zielen gibt Ihnen und Ihrem Team Orientierung für Entscheidungen im Alltag."]},
+ {f:"G", t:"Wie stark verändern Markt, Technik oder Kundenverhalten in den nächsten Jahren die Nachfrage nach Ihrem Angebot?",
+  hint:"Zum Beispiel neue Wettbewerber, Preisdruck, neue Vorschriften, Online-Angebote oder veränderte Kundenwünsche.",
+  o:["Wir haben das geprüft und unser Angebot bereits angepasst","Wir sehen Veränderungen und reagieren schrittweise","Wir spüren Druck, haben aber noch keine Antwort","Damit haben wir uns noch nicht beschäftigt"],
+  imp:["Veränderungen früh erkennen","Prüfen Sie gezielt, welche Entwicklungen Ihre Branche in den nächsten drei Jahren prägen und was das für Ihr Angebot bedeutet."]},
+ {f:"G", t:"Wie stark hängt Ihr Umsatz von einzelnen Kunden, Auftraggebern oder Zuweisern ab?",
+  o:["Breit gestreut, kein Kunde über 10 % des Umsatzes","Einige wichtige Kunden, keiner über 25 %","Ein bis zwei Kunden machen jeweils mehr als 25 % aus","Ohne einen oder zwei Kunden wäre das Unternehmen gefährdet"],
+  imp:["Abhängigkeiten verringern","Wenige große Kunden sind ein Risiko für Umsatz und Liquidität. Neue Kundengruppen oder ein zweites Standbein machen Sie unabhängiger."]},
+ {f:"G", t:"Wann haben Sie zuletzt eine neue Leistung, ein neues Produkt oder einen neuen Vertriebsweg eingeführt?",
+  o:["In den letzten 12 Monaten","Vor ein bis drei Jahren","Vor mehr als drei Jahren","Bewusst noch nie"],
+  imp:["Wertschöpfung erweitern","Zusatzleistungen, Servicepakete oder neue Vertriebswege sind oft der schnellste Hebel für zusätzlichen Ertrag aus bestehenden Kundenbeziehungen."]},
+ {f:"D", t:"Wie setzen Sie digitale Werkzeuge und Künstliche Intelligenz im Arbeitsalltag ein?",
+  o:["Systematisch in mehreren Abläufen, mit messbarer Entlastung","In einzelnen Bereichen, zum Beispiel Buchhaltung oder Terminplanung","Wir haben einiges ausprobiert, im Alltag nutzen wir es kaum","Bisher kaum"],
+  imp:["KI und Digitalisierung gezielt nutzen","Zwei bis drei gezielt eingeführte Anwendungen können Angebotserstellung, Verwaltung oder Kundenkommunikation spürbar entlasten."]},
+ {f:"W", t:"Wie genau wissen Sie, mit welchen Leistungen und Kunden Sie Geld verdienen?",
+  o:["Wir kennen den Deckungsbeitrag je Leistung und steuern monatlich","Wir haben eine gute Einschätzung, aber keine genaue Rechnung","Wir sehen das Gesamtergebnis in der BWA","Das zeigt sich erst mit dem Jahresabschluss"],
+  imp:["Ertragsquellen transparent machen","Wer weiß, welche Leistungen und Kunden sich rechnen, kann Preise, Angebot und Vertrieb gezielt steuern."]},
+ {f:"O", t:"Wie gut ist Ihr Unternehmen personell für die nächsten Jahre aufgestellt?",
+  hint:"Fachkräfte, Nachwuchs, Wissen einzelner Schlüsselpersonen.",
+  o:["Gut besetzt, Nachwuchs und Wissensweitergabe sind geregelt","Aktuell ausreichend, für die Zukunft aber nicht gesichert","Offene Stellen bremsen uns bereits","Wichtiges Wissen hängt an wenigen Personen, die bald ausscheiden könnten"],
+  imp:["Fachkräfte und Wissen sichern","Mitarbeitergewinnung, Bindung und geregelte Wissensweitergabe entscheiden in vielen Betrieben über die Zukunftsfähigkeit."]},
+ {f:"O", t:"Wie stark hängt das Tagesgeschäft an Ihnen persönlich?",
+  o:["Es läuft auch drei Wochen ohne mich","Es läuft mit Einschränkungen eine Weile ohne mich","Nur wenige Tage, dann stockt es","Ohne mich steht vieles still"],
+  imp:["Unternehmen unabhängiger von Ihnen machen","Klare Zuständigkeiten und Abläufe schaffen Freiraum für Unternehmerarbeit und erhöhen den Wert des Unternehmens, etwa bei einer Nachfolge."]},
+ {f:"S", t:"Wie viel Zeit investieren Sie regelmäßig in die Weiterentwicklung Ihres Unternehmens statt ins Tagesgeschäft?",
+  o:["Feste Termine, konkrete Projekte mit Verantwortlichen","Gelegentlich, wenn es die Auftragslage zulässt","Selten, meist nur bei akutem Anlass","Dafür bleibt keine Zeit"],
+  imp:["Feste Zeit für die Zukunft einplanen","Ein regelmäßiger Termin für Weiterentwicklung mit klaren Verantwortlichen sorgt dafür, dass gute Ideen auch umgesetzt werden."]}
+];
+const LEVELS = [
+ {min:20, name:"Gut aufgestellt", color:"--high", text:"Ihr Unternehmen hat eine solide Grundlage für die nächsten Jahre. Jetzt geht es darum, den Vorsprung gezielt auszubauen und die nächsten Zukunftsprojekte zu definieren."},
+ {min:12, name:"Solide Basis mit Ansatzpunkten", color:"--mid", text:"Vieles funktioniert, in einzelnen Handlungsfeldern liegen aber deutliche Potenziale. Mit klaren Prioritäten lässt sich hier in überschaubarer Zeit viel bewegen."},
+ {min:0, name:"Jetzt die Weichen stellen", color:"--low", text:"Das Tagesgeschäft bindet viel Kraft, und wichtige Zukunftsthemen sind noch offen. Ein strukturierter Blick von außen hilft, die richtigen Prioritäten zu setzen."}
+];
+
+const answers = new Array(Q.length).fill(null); let idx = 0;
+const quiz = $('quiz'), result = $('result');
+function renderQ(){
+  const q = Q[idx], done = answers.filter(a => a !== null).length;
+  quiz.innerHTML = `
+    <div><div class="prow-top"><span>Frage ${idx+1} von ${Q.length}</span><span>${Math.round(done/Q.length*100)} %</span></div><div class="bar"><i style="width:${done/Q.length*100}%"></i></div></div>
+    <p class="ftag">${FIELDS[q.f]}</p>
+    <h3 class="qt" id="qt">${esc(q.t)}</h3>
+    ${q.hint ? `<p class="qh">${esc(q.hint)}</p>` : ''}
+    <div class="opts" role="group" aria-labelledby="qt">${q.o.map((o,i) => `<button type="button" class="opt" data-i="${i}" aria-pressed="${answers[idx]===i}"><span class="dot"></span><span>${esc(o)}</span></button>`).join('')}</div>
+    <div class="navrow"><button type="button" class="btn ghost" id="back" ${idx===0?'hidden':''}>Zurück</button><button type="button" class="btn" id="next" ${answers[idx]===null?'disabled':''}>${idx===Q.length-1?'Auswertung anzeigen':'Weiter'}</button></div>`;
+  quiz.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => { answers[idx] = +b.dataset.i; if (idx < Q.length-1) { idx++; } renderQ(); }));
+  quiz.querySelector('#back').addEventListener('click', () => { idx--; renderQ(); });
+  quiz.querySelector('#next').addEventListener('click', () => { if (answers[idx] === null) return; if (idx < Q.length-1) { idx++; renderQ(); } else showResult(); });
+}
+const scoreOf = i => 3 - answers[i];
+let LAST = null;
+function showResult(){
+  const total = Q.reduce((s,_,i) => s + scoreOf(i), 0), lvl = LEVELS.find(l => total >= l.min);
+  const prof = Object.keys(FIELDS).map(k => { const ids = Q.map((q,i) => q.f===k ? i : -1).filter(i => i>=0); return {name:FIELDS[k], pct:Math.round(ids.reduce((s,i)=>s+scoreOf(i),0)/(ids.length*3)*100)}; });
+  const tone = p => p>=67 ? '--high' : p>=40 ? '--mid' : '--low';
+  const weak = Q.map((q,i) => ({i,s:scoreOf(i)})).filter(x => x.s <= 1).sort((a,b) => a.s-b.s || a.i-b.i).slice(0,3);
+  const imps = weak.length ? weak : Q.map((q,i)=>({i,s:scoreOf(i)})).sort((a,b)=>a.s-b.s||a.i-b.i).slice(0,2);
+  LAST = {total, level: lvl.name, prof, imps: imps.map(x => Q[x.i].imp[0])};
+  quiz.hidden = true; result.hidden = false;
+  result.innerHTML = `
+    <p class="eyebrow" style="margin:0">Ihr Ergebnis</p>
+    <div class="rhead"><div class="score">${total}<small> / 27</small></div><div><span class="pill" style="background:var(${lvl.color})">${lvl.name}</span><p>${lvl.text}</p></div></div>
+    <h3 class="s">Ihr Profil nach Handlungsfeldern</h3>
+    <div class="profile">${prof.map(p => `<div class="prow"><div class="t"><span>${p.name}</span><b>${p.pct} %</b></div><div class="bar"><i style="width:${p.pct}%;background:var(${tone(p.pct)})"></i></div></div>`).join('')}</div>
+    <h3 class="s">${weak.length ? 'Ihre wichtigsten Ansatzpunkte' : 'Hier lohnt sich der genauere Blick'}</h3>
+    <ul class="imps">${imps.map(x => `<li><strong>${Q[x.i].imp[0]}</strong><span>${Q[x.i].imp[1]}</span></li>`).join('')}</ul>
+    <p class="note">Der Zukunftscheck ist eine erste Selbsteinschätzung. Im persönlichen Auswertungsgespräch (ca. 45 Minuten, kostenfrei) besprechen wir Ihr Ergebnis und konkrete nächste Schritte. Die anschließende Begleitung kann für viele kleine und mittlere Unternehmen über öffentliche Programme gefördert werden. Ob und in welcher Höhe, prüfen wir gemeinsam mit Ihnen.</p>
+    <h3 class="s">Auswertungsgespräch anfragen</h3>
+    <form class="f" id="contactForm" novalidate>
+      <label>Name<input type="text" id="f-name" autocomplete="name" required></label>
+      <label>Unternehmen<input type="text" id="f-firma" autocomplete="organization" required></label>
+      <label>E-Mail<input type="email" id="f-mail" autocomplete="email" required></label>
+      <label>Telefon (optional)<input type="tel" id="f-tel" autocomplete="tel"></label>
+      <label class="full">Branche<input type="text" id="f-branche" placeholder="z. B. Elektrohandwerk, Zahnarztpraxis, Großhandel"></label>
+      <label class="chk full"><input type="checkbox" id="f-ds" required><span>Ich bin einverstanden, dass meine Angaben und mein Ergebnis zur Bearbeitung meiner Anfrage an ${esc(CFG.firma || 'den Anbieter')} übermittelt werden. Die <a href="${esc(safeUrl(CFG.datenschutzUrl) || '#')}" target="_blank" rel="noopener">Datenschutzerklärung</a> habe ich zur Kenntnis genommen.</span></label>
+      <div class="full navrow"><button type="button" class="btn ghost" id="restart">Check neu starten</button><button type="submit" class="btn">Gespräch anfragen</button></div>
+      <p class="full msg" id="f-msg" role="status"></p>
+    </form>`;
+  const form = $('contactForm');
+  form.addEventListener('submit', async e => {
+    e.preventDefault(); const msg = $('f-msg'), v = id => $(id).value.trim();
+    if (!(v('f-name') && v('f-firma') && /\S+@\S+\.\S+/.test(v('f-mail')) && $('f-ds').checked)) { msg.className = 'full msg err'; msg.textContent = 'Bitte füllen Sie Name, Unternehmen und E-Mail aus und bestätigen Sie die Datenschutzerklärung.'; return; }
+    const payload = { name:v('f-name'), unternehmen:v('f-firma'), email:v('f-mail'), telefon:v('f-tel'), branche:v('f-branche'), punkte:LAST.total+' / 27', stufe:LAST.level, profil:LAST.prof.map(p => p.name+': '+p.pct+' %').join('; '), ansatzpunkte:LAST.imps.join('; '), quelle:location.href };
+    const ep = safeUrl(CFG.formEndpoint);
+    if (ep) {
+      try { const r = await fetch(ep, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)}); if (!r.ok) throw 0; msg.className = 'full msg ok'; msg.textContent = 'Vielen Dank! Ihre Anfrage wurde übermittelt. Wir melden uns bei Ihnen.'; form.reset(); return; }
+      catch(err) { msg.className = 'full msg err'; msg.textContent = 'Die Übermittlung hat nicht geklappt. Bitte schreiben Sie uns direkt' + (CFG.email ? ' an ' + CFG.email : '') + '.'; return; }
+    }
+    if (!CFG.email) { msg.className = 'full msg err'; msg.textContent = 'Für diese Seite ist noch keine E-Mail-Adresse hinterlegt. Bitte ergänzen.'; return; }
+    const body = ['Anfrage Auswertungsgespräch Zukunftscheck','','Name: '+payload.name,'Unternehmen: '+payload.unternehmen,'E-Mail: '+payload.email,'Telefon: '+payload.telefon,'Branche: '+payload.branche,'','Ergebnis: '+payload.punkte+' ('+payload.stufe+')','Profil: '+payload.profil,'Ansatzpunkte: '+payload.ansatzpunkte].join('\n');
+    location.href = 'mailto:' + encodeURIComponent(CFG.email).replace('%40','@') + '?subject=' + encodeURIComponent('Zukunftscheck: Anfrage von ' + payload.unternehmen) + '&body=' + encodeURIComponent(body);
+    msg.className = 'full msg ok'; msg.textContent = 'Ihr E-Mail-Programm öffnet sich mit Ihrer Anfrage. Bitte senden Sie die Nachricht ab.';
+  });
+  $('restart').addEventListener('click', () => { answers.fill(null); idx = 0; result.hidden = true; quiz.hidden = false; renderQ(); quiz.scrollIntoView({behavior:'smooth', block:'start'}); });
+  result.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+applyConfig(); renderQ();
+</script></body></html>
